@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+    <title>Banking Transition</title>
+  </head>
+  <body class="bg-green-100">
+    <header>
+      <h1 class="text-5xl font-normal text-center mt-16">Welcome to your <span class="font-semibold text-green-600">Amount Transition</span>!!!</h1>
+    </header>
+    <main>
+      <!-- Deposit,Withdrew and Balance count -->
+      <section class="grid grid-cols-3 gap-4 bg-blue-200 p-8 rounded-md w-3/4 mx-auto mt-8">
+        <!-- Deposit Count -->
+        <div class="bg-indigo-300 rounded-full text-center text-white p-8">
+          <h4 class="text-2xl">Deposit</h4>
+          <h2 class="text-5xl font-semibold">$<span id="deposit-total">0000</span></h2>
+        </div>
+        <!-- Withdrew Count -->
+        <div class="bg-green-300 rounded-full text-center text-white p-8">
+          <h4 class="text-2xl">Withdrew</h4>
+          <h2 class="text-5xl font-semibold">$<span id="withdrew-total">0000</span></h2>
+        </div>
+        <!-- Balance Count -->
+        <div class="bg-purple-300 rounded-full text-center text-white p-8">
+          <h4 class="text-2xl">Balance</h4>
+          <h2 class="text-5xl font-semibold">$<span id="balance-total">0100</span></h2>
+        </div>
+      </section>
+      <section class="text-center text-red-300 hidden mt-4">
+        <h4 id="error-string">Please enter the Number !!</h4>
+        <h4 id="error-negative-number">Please enter the Positive Number !!</h4>
+      </section>
+      <!-- Deposit and Withdrew input -->
+      <section class="grid grid-cols-2 gap-8 w-3/4 mx-auto mt-8">
+        <!-- Deposit Card -->
+        <div class="bg-yellow-300 rounded-md p-8">
+          <h5 class="text-white text-2xl font-semibold mb-2">Please Deposit Amount</h5>
+          <input
+            id="deposit-input"
+            class="block border rounded border-gray-400 mb-4 w-3/4 px-2"
+            type="text"
+            placeholder="$ Amount you want to Deposit"
+            required
+          />
+          <button id="deposit-btn" class="bg-yellow-500 text-white font-medium rounded py-2 px-4">Deposit</button>
+        </div>
+        <!-- Withdrew card -->
+        <div class="bg-red-300 rounded-md p-8">
+          <h5 class="text-white text-2xl font-semibold mb-2">Please Withdrew Amount</h5>
+          <input
+            id="withdrew-input"
+            class="block border rounded border-gray-400 mb-4 w-3/4 px-2"
+            type="text"
+            placeholder="$ Amount you want to Withdrew"
+            required
+          />
+          <button id="withdrew-btn" class="bg-red-500 text-white font-medium rounded py-2 px-4">Withdrew</button>
+        </div>
+      </section>
+      <footer>
+        <p class="text-center text-blue-300 mt-14">
+          <small> Many thanks to you from <span class="font-bold">Islami Bank</span> </small>
+        </p>
+      </footer>
+    </main>
+    <script src="js/banking.js"></script>
+  </body>
+</html>
